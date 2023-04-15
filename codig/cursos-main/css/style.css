@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* Cards y loader */
+
+.title{
+    margin-top: 50px;
+}
+.contentCards{
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+.flexCards{
+    display: flex;
+    gap: 20px;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card article{
+    width: 100%;
+    overflow: hidden;
+}
+.card *{
+    color: white;
+}
+.card article img{
+    width: 100%;
+    border-radius: 40px;
+    height: calc(100% - 100px);
+    transition: all 0.3s;
+}
+.card{
+    background-color: #242323;
+    border-radius: 10px;
+    width: calc(100% / 5);
+    min-width: 220px;
+}
+.contentText{
+    padding: 10px;
+    box-shadow: 0px 0px 100px 13px #242323;
+}
+.card:hover .imgCard{
+    transform: scale(1.2);
+}
+.contentText h4{
+    margin: 10px 0 10px 0;
+    text-align: center;
+    text-decoration: none;
+}
+.contentText p, .contentText p a{
+    text-align: center;
+    color: #e1ca94;
+}
+.loader{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000000ef;
+    position: fixed;
+    transition: all 1s;
+    overflow: hidden;
+}
+.flechaIzq{
+    transform: rotate(180deg);
+}
+.logoHidden{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.displayNone{
+    display: none;
+}
+.imgLogo{
+    width: 400px;
+    height: 400px;
+}
+.logoOpacity{
+    width: 1500px;
+    height: 1500px;
+    transition: all 0.5s;
+}
+@media (max-width: 800px) {
+    .card{
+    min-width: 200px;
+}
+.flexCards{
+    width: 95%;
+}
+}
+
+/* Navagacion */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #222831;
+}
+
+a,
+button {
+  color: white;
+}
+
+.image-clickable {
+  margin-right: auto;
+}
+
+.logo {
+  height: 4.2rem;
+  margin-right: auto;
+  margin-left: 3rem
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: all 0.5s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: rgba(0, 173, 181, 0.8);
+}
+
+button, .button{
+  cursor: pointer;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: all 0.5s ease 0s;
+  margin-left: 20px;
+}
+
+/* carrusek */
+
+.flecha{
+    width: 100px;
+    filter: invert(1);
+}
+.fondoFlecha{
+    z-index: 10 ;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+.flechaIzq{
+    left: 0px;
+}
+.flechaDer{
+    right: 0px;
+}
+.contentCarrusel{
+    display: flex;
+    position: relative;
+}
+.carrusel{
+    overflow: hidden;
+    width: calc(80%);
+    margin-top: 100px;
+}
+.sectionCarrusel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardCarrusel{
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 400px) {
+
+  .card article img, .imgCard{
+      height: 210px;
+  }
+  
+}
